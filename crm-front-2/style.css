@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSansRegular'),
+        url('../fonts/OpenSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSansSemiBold'),
+        url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('OpenSansBold'),
+        url('../fonts/OpenSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: #e5e5e5;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.thPointed {
+    cursor: pointer;
+}
+
+td {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-left: 12vh;
+}
+
+.header-link {
+    margin: 0 53px 0 20px;
+}
+
+.header-input {
+    height: 44px;
+    width: 581px;
+    border-color: #33333333;
+}
+
+.header-input::placeholder {
+    padding-left: 16px;
+    color: #B0B0B0;
+}
+
+/* body */
+
+.head-container {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+table {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tbody {
+    background-color: white;
+}
+
+.addButton {
+    margin: 40px auto;
+    padding: 10px;
+    background-color: inherit;
+    border: 1px solid #9873FF;
+    color: #9873FF;
+    cursor: pointer;
+}
+
+.div-button {
+    display: flex;
+}
+
+tr th {
+    margin-right: 8px;
+    text-align: left;
+    color: #B0B0B0;
+}
+
+#headID {
+    width: 6%;
+}
+
+#headName {
+    width: 25%;
+}
+
+#headCreateDate,
+#headUpdateDate {
+    width: 13%;
+}
+
+#headContacts {
+    width: 11%;
+}
+
+#headActions {
+    width: 19%;
+}
+
+/* modal */
+
+dialog {
+    border: none;
+    padding: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.createModal-container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    /* min-height: 400px; */
+}
+
+.header-client {
+    margin-left: 15px;
+}
+
+.inputAddFullname {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.inputAddFullname input {
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.createModal-container input:focus {
+    outline: none;
+}
+
+.inputAddContact {
+    display: flex;
+    flex-direction: column;
+    min-height: 35px;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+}
+
+.inputAddSave {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.inputAddSaveButton {
+    margin-bottom: 0 !important;
+    width: 147px;
+    height: 45px;
+    background-color: #9873FF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.addInputCancel {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+
+/*----*/
+
+th {
+    position: relative;
+}
+
+.sorted::after {
+    content: '';
+    position: absolute;
+    background-image: url(./img/arrowDown.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+}
+
+.reverseSorted::after {
+    content: '';
+    position: absolute;
+    background-image: url(./img/arrowUp.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+}
+
+/* delete */
+
+.deleteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 100px;
+}
+
+.descr-delete-client {
+    max-width: 250px;
+    text-align: center;
+}
+
+#deleteClient {
+    margin-bottom: 15px !important;
+}
+
+.header-delete-client {
+    margin-top: 0;
+}
+
+/*tooltip*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    top: -35px;
+    left: -52px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.none {
+    display: none;
+}
+
+.showMoreContacts {
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    background: none;
+    border-radius: 100%;
+    border: 1px solid #9873FF;
+    cursor: pointer;
+    font-size: 10px;
+}
